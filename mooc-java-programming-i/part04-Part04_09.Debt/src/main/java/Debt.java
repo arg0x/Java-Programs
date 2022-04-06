@@ -2,7 +2,7 @@ public class Debt {
     private double balance;
     private double interestRate;
 
-    public Debt(double initialRate, double initialInterestRate){
+    public Debt(double initialRate, double initialInterestRate) {
         this.balance = initialRate;
         this.interestRate = initialInterestRate;
     }
@@ -11,9 +11,9 @@ public class Debt {
         System.out.println(this.balance);
     }
 
-    public void waitOneYear(){
-        this.balance = this.balance*this.interestRate;
-        
+    public void waitOneYear() {
+        this.balance = this.balance * this.interestRate;
+
     }
 
 }

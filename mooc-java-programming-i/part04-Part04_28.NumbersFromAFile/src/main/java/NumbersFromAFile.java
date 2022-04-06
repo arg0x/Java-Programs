@@ -16,18 +16,18 @@ public class NumbersFromAFile {
         int count = 0;
         try {
             Scanner scanner2 = new Scanner(Paths.get(file));
-            while(scanner2.hasNextLine()){
+            while (scanner2.hasNextLine()) {
                 int num = Integer.valueOf(scanner2.nextLine());
-                for(int i=lowerBound; i<=upperBound; i++){
-                    if(num==i){
+                for (int i = lowerBound; i <= upperBound; i++) {
+                    if (num == i) {
                         count++;
                     }
                 }
             }
         } catch (Exception e) {
-            System.out.println("Error: "+e);
+            System.out.println("Error: " + e);
         }
-        System.out.println("Numbers: "+count);
+        System.out.println("Numbers: " + count);
 
     }
 

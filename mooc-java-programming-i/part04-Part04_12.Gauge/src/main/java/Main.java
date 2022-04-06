@@ -6,7 +6,7 @@ public class Main {
 
         Gauge g = new Gauge();
 
-        while(!g.full()) {
+        while (!g.full()) {
             System.out.println("Not full! Value: " + g.value());
             g.increase();
         }

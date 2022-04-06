@@ -12,8 +12,8 @@ public class Main {
         int years = 0;
 
         while (years < 20) {
-           mortgage.waitOneYear();
-           years = years + 1;
+            mortgage.waitOneYear();
+            years = years + 1;
         }
 
         mortgage.printBalance();

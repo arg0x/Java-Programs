@@ -11,6 +11,6 @@ public class MainProgram {
         counter.decrement();
         counter.printValue();
         counter.decrement();
-        counter.printValue();    
+        counter.printValue();
     }
 }

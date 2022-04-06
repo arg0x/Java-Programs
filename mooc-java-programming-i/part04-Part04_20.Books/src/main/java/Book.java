@@ -1,27 +1,27 @@
 public class Book {
     private String title;
-    private int pages; 
+    private int pages;
     private int year;
 
-    public Book(String title, int pages, int year){
+    public Book(String title, int pages, int year) {
         this.title = title;
         this.pages = pages;
         this.year = year;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return this.title;
-    } 
+    }
 
-    public int getPages(){
+    public int getPages() {
         return this.pages;
     }
 
-    public int getYear(){
+    public int getYear() {
         return this.year;
     }
 
-    public String toString(){
-        return this.getTitle()+", "+this.getPages()+" pages, "+this.getYear();
+    public String toString() {
+        return this.getTitle() + ", " + this.getPages() + " pages, " + this.getYear();
     }
 }

@@ -18,7 +18,7 @@ public class SportStatistics {
 
         try {
             Scanner scanner = new Scanner(Paths.get(file));
-            while(scanner.hasNext()) {
+            while (scanner.hasNext()) {
                 String lines = scanner.nextLine();
                 String[] array = lines.split(",");
                 String homeTeam = array[0];
@@ -26,37 +26,37 @@ public class SportStatistics {
                 String homePoints = array[2];
                 String visitingPoints = array[3];
 
-                if(homeTeam.equals(teamName) || vistingTeam.equals(teamName)) {
+                if (homeTeam.equals(teamName) || vistingTeam.equals(teamName)) {
                     gameCount++;
 
                 }
 
-                if(homeTeam.equals(teamName)) {
-                    if(Integer.valueOf(homePoints) > Integer.valueOf(visitingPoints)) {
+                if (homeTeam.equals(teamName)) {
+                    if (Integer.valueOf(homePoints) > Integer.valueOf(visitingPoints)) {
                         homeWin++;
-                    }else{
+                    } else {
                         homeLoss++;
                     }
                 }
 
-                if(vistingTeam.equals(teamName)){
-                    if(Integer.valueOf(visitingPoints) > Integer.valueOf(homePoints)) {
+                if (vistingTeam.equals(teamName)) {
+                    if (Integer.valueOf(visitingPoints) > Integer.valueOf(homePoints)) {
                         vistingWin++;
-                    }else{
+                    } else {
                         vistingLoss++;
                     }
                 }
             }
         } catch (Exception e) {
-            System.out.println("Error "+e);
+            System.out.println("Error " + e);
         }
 
         System.out.print("Games: ");
         System.out.println(gameCount);
         System.out.print("Wins: ");
-        System.out.println(homeWin+vistingWin);
+        System.out.println(homeWin + vistingWin);
         System.out.print("Losses: ");
-        System.out.println(homeLoss+vistingLoss);
+        System.out.println(homeLoss + vistingLoss);
     }
 
 }

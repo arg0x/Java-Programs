@@ -13,21 +13,20 @@ public class Items {
         // Item item = new Item("Hammer");
         // items.add(item);
 
-        while(true){
+        while (true) {
             System.out.print("Name: ");
             String string = scanner.nextLine();
 
-            if(string.equals("")){
+            if (string.equals("")) {
                 break;
             }
             items.add(new Item(string));
 
         }
 
-        for(Item i : items){
+        for (Item i : items) {
             System.out.println(i);
         }
-
 
     }
 }

@@ -4,20 +4,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        
-        // implement here the program that allows the user to enter 
+
+        // implement here the program that allows the user to enter
         // book information and to examine them
 
         ArrayList<Book> books = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
-        while(true) {
+        while (true) {
             System.out.println("Title: ");
             String title = scanner.nextLine();
-            if(title.isEmpty()) {  
+            if (title.isEmpty()) {
                 break;
             }
-            
+
             System.out.println("Pages: ");
             int pages = Integer.valueOf(scanner.nextLine());
 
@@ -30,11 +30,11 @@ public class Main {
         System.out.println("What information will be printed?");
         String info = scanner.nextLine();
 
-        for(Book i : books){
-            if(info.equals("everything")){
+        for (Book i : books) {
+            if (info.equals("everything")) {
                 System.out.println(i);
             }
-            if(info.equals("name")){
+            if (info.equals("name")) {
                 System.out.println(i.getTitle());
             }
         }

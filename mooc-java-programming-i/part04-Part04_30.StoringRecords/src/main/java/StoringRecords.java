@@ -29,7 +29,7 @@ public class StoringRecords {
 
         try {
             Scanner read = new Scanner(Paths.get(file));
-            while(read.hasNext()){
+            while (read.hasNext()) {
                 String line = read.nextLine();
                 String[] array = line.split(",");
                 String name = array[0];
@@ -38,9 +38,9 @@ public class StoringRecords {
                 persons.add(new Person(name, Integer.valueOf(age)));
             }
         } catch (Exception e) {
-            System.out.println("Error: "+e);
+            System.out.println("Error: " + e);
         }
-        
+
         return persons;
 
     }

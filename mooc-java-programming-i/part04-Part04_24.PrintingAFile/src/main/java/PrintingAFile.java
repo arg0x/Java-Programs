@@ -7,13 +7,12 @@ public class PrintingAFile {
     public static void main(String[] args) {
         try {
             Scanner scanner = new Scanner(Paths.get("data.txt"));
-            while(scanner.hasNextLine()){
+            while (scanner.hasNextLine()) {
                 String string = scanner.nextLine();
                 System.out.println(string);
             }
-        } 
-        catch (Exception e) {
-            System.out.println("Error: "+e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
