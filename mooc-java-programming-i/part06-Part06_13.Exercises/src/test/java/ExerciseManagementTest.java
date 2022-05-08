@@ -1,0 +1,41 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class ExerciseManagementTest {
+    @Test // This tells the JUnit test framework that this is an executable test method.
+    public void exerciseListEmptyAtBeginning() {
+        ExerciseManagement management = new ExerciseManagement();
+        assertEquals(0, management.exerciseList().size());
+    }
+
+    @Test
+    public void addingExerciseGrowsListByOne() {
+        ExerciseManagement management = new ExerciseManagement();
+        management.add("Write a Test");
+        assertEquals(1, management.exerciseList().size());
+    }
+
+    @Test
+    public void addedExerciseIsInList() {
+        ExerciseManagement management = new ExerciseManagement();
+        management.add("Write a test");
+        assertTrue(management.exerciseList().contains("Write a test"));
+    }
+
+    @Test
+    public void exerciseCanBeMarkedAsComplete() {
+        ExerciseManagement management = new ExerciseManagement();
+        management.add("New exercise");
+        management.markAsCompleted("New exercise");
+        assertTrue(management.isCompleted("New exercise"));
+    }
+
+    @Test
+    public void ifNotMarkedCompletedIsNotCompleted() {
+        ExerciseManagement management = new ExerciseManagement();
+        management.add("New exercise");
+        management.markAsCompleted("New exercise");
+        assertFalse(management.isCompleted("Some exercise"));
+    }
+
+}
